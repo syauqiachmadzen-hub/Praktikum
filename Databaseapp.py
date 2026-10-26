@@ -30,3 +30,6 @@ def insert_nilai(nama, biologi, fisika, inggris, prediksi):
         (nama, biologi, fisika, inggris, prediksi)
     )
 
+def get_all_nilai():
+    """Mengambil seluruh data dari tabel nilai_siswa."""
+    return run_query("SELECT * FROM nilai_siswa")
