@@ -29,7 +29,12 @@ def init_db():
         )
     """)
 
-
+def add_nilai(nama, biologi, fisika, inggris, prediksi):
+    """Menyimpan data nilai siswa baru ke SQLite."""
+    run_query("""
+        INSERT INTO nilai_siswa (nama_siswa, biologi, fisika, inggris, prediksi_fakultas)
+        VALUES (?, ?, ?, ?, ?)
+    """, (nama, biologi, fisika, inggris, prediksi))
 
 
 
