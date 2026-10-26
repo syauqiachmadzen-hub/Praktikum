@@ -36,7 +36,12 @@ def add_nilai(nama, biologi, fisika, inggris, prediksi):
         VALUES (?, ?, ?, ?, ?)
     """, (nama, biologi, fisika, inggris, prediksi))
 
-
+def get_all_nilai():
+    """Mengambil seluruh data nilai dari SQLite."""
+    return run_query("""
+        SELECT id, nama_siswa, biologi, fisika, inggris, prediksi_fakultas 
+        FROM nilai_siswa ORDER BY id DESC
+    """)
 
 
 
